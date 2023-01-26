@@ -1,5 +1,5 @@
-import { LocationRepository } from "@domain/repository/location-repository";
-import { Location } from "@domain/entities/Location";
+import { LocationRepository } from "src/application/repository/location-repository";
+import { Location } from "@domain/domain/entities/Location";
 
 export class LocationList {
     
