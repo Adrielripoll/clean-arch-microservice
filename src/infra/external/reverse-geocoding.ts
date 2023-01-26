@@ -1,4 +1,4 @@
-import { Coordinates } from "@domain/entities/Coordinates";
+import { Coordinates } from "@application/entities/Coordinates";
 import axios from 'axios'
 
 export async function reverseGeocoding(coordinates: Coordinates): Promise<string>{

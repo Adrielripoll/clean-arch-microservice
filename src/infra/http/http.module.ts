@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common'
 import { LocationController } from './controllers/location.controller';
-import { CreateLocation } from '@domain/use-cases/create-location';
+import { CreateLocation } from 'src/application/use-cases/create-location';
 import { DatabaseModule } from '@infra/database/database.module';
+import { LocationList } from 'src/application/use-cases/location-list';
 
 @Module({
     imports: [DatabaseModule],
     controllers: [LocationController],
-    providers: [CreateLocation]
+    providers: [CreateLocation, LocationList]
 })
 export class HttpModule {}
 

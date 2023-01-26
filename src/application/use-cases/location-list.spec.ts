@@ -1,5 +1,5 @@
-import { Coordinates } from "@domain/entities/Coordinates"
-import { Location } from "@domain/domain/entities/Location"
+import { Coordinates } from "@application/entities/Coordinates"
+import { Location } from "@application/entities/Location"
 import { InMemoryLocationRepository } from "@test/repositories/inMemoryLocationRepository"
 
 describe('Location list', () => {
