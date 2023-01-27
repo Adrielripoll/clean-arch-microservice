@@ -11,4 +11,17 @@ export class LocationMapper {
             createdAt: location.createdAt
         })
     }
+
+    static toDatabase(location: Location){
+        return {
+            _id: location.id,
+            coordinates: {
+                latitude: location.coordinates.latitude,
+                longitude: location.coordinates.longitude
+            },
+            freightMatchId: location.freightMatchId,
+            address: location.address,
+            createdAt: location.createdAt
+        }
+    }
 }
