@@ -1,6 +1,6 @@
-import { Coordinates } from "@domain/entities/Coordinates"
+import { Coordinates } from "@application/entities/Coordinates"
 import { Location as RawLocation} from "../models/location"
-import { Location } from '@domain/entities/Location'
+import { Location } from '@application/entities/Location'
 
 export class LocationMapper {
     static toDomain(location: RawLocation){
