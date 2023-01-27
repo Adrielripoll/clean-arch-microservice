@@ -5,7 +5,7 @@ export class KafkaConsumerService extends ServerKafka implements OnModuleDestroy
     constructor(){
         super({
             client: {
-                brokers: ['localhost: 9092']
+                brokers: ['192.168.1.6:9092']
             }
         })
     }
