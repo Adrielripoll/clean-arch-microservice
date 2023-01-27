@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common'
 import { CreateLocation } from 'src/application/use-cases/create-location'
-import { CreateNotificationRequest } from 'src/application/use-cases/create-location'
 import { LocationList } from 'src/application/use-cases/location-list'
+import { CreateLocationDto } from '../dtos/createLocation-dto'
 
 @Controller('locations')
 export class LocationController {
@@ -17,7 +17,7 @@ export class LocationController {
     }
     
     @Post()
-    async save(@Body() request: CreateNotificationRequest){
+    async save(@Body() request: CreateLocationDto){
         return this.createLocation.execute(request)
     }
 
