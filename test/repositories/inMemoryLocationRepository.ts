@@ -1,5 +1,5 @@
-import { Location } from "@domain/entities/Location";
-import { LocationRepository } from "@domain/repository/location-repository";
+import { Location } from "@application/entities/Location";
+import { LocationRepository } from "src/application/repository/location-repository";
 
 export class InMemoryLocationRepository implements LocationRepository {
     
