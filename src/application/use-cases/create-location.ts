@@ -4,7 +4,7 @@ import { Coordinates } from "../entities/Coordinates";
 import { Location } from "../entities/Location";
 import { reverseGeocoding } from "src/infra/external/reverse-geocoding";
 
-export interface CreateNotificationRequest {
+export interface CreateLocationRequest {
     freightMatchId: number
     latitude: number
     longitude: number
@@ -14,7 +14,7 @@ export interface CreateNotificationRequest {
 export class CreateLocation {
     constructor(private readonly locationRepository: LocationRepository){}
 
-    async execute(request: CreateNotificationRequest){
+    async execute(request: CreateLocationRequest){
         const { freightMatchId, latitude, longitude } = request
 
         const coordinates = new Coordinates({latitude, longitude})
